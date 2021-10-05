@@ -1,0 +1,18 @@
+.footer {
+  background-color: #71d0f5ff;
+  width: 100%;
+  margin-top: 100px;
+  position: absolute;
+
+  &__title {
+    font-size: 35px;
+    text-align: center;
+    color: #075149ff;
+  }
+
+  &__description {
+    font-size: 20px;
+    text-align: center;
+    color: #075149ff;
+  }
+}
