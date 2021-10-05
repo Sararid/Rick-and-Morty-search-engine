@@ -47,7 +47,7 @@ const CharCard = (props) => {
                 <section className="wrapperCharCard">
                     <div className="wrapperCharCard__link">
                         <Link to="/" className="wrapperCharCard__link--text">
-                            Volver
+                            Back
                         </Link>
                     </div>
 
