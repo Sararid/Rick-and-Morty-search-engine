@@ -1,13 +1,12 @@
-// Fichero src/components/App.js
 import "../styles/Reset.scss";
 import "../styles/App.scss";
 
 import { useEffect, useState } from "react";
-import api from "../services/api"; // Importamos el servicio que acabamos de crear
+import api from "../services/api";
 import { Switch, useRouteMatch, Route } from "react-router-dom";
 import ls from "../services/local-storages";
 
-//importar componentes:
+
 import Header from "./Header";
 import Filters from "./Filters";
 import RenderCharList from "./RenderCharList";
@@ -34,11 +33,11 @@ function App() {
     }
   }, []);
 
-  //GUARDAR NAME EN LOCAL STORAGE
+
   useEffect(() => {
     ls.set("name", searchName);
   }, [searchName]);
-  // FUNCTION INPUTS SEARCH NAME AND SELECT INPUT
+
 
   const handleSearchName = (value) => {
     setSearchName(value);
@@ -48,21 +47,11 @@ function App() {
     setSelectSpecies(value);
   };
 
-  //filter
 
   const FilteredData = data
-
-    .filter((char) => {
-      const charName = char.name
-        .toLocaleLowerCase()
-        .includes(searchName.toLocaleLowerCase());
-      if (charName === false) {
-        return console.log('error');
-      } else {
-        return charName;
-      }
-    })
-
+    .filter((char) =>
+      char.name.toLocaleLowerCase().includes(searchName.toLocaleLowerCase())
+    )
     .filter(
       (char) => selectSepecies === "All" || selectSepecies === char.species
     )
@@ -77,7 +66,6 @@ function App() {
     });
 
 
-  //ROUTER
   const routeData = useRouteMatch("/character/:characterId");
   console.log(routeData)
   const charId = routeData != null ? routeData.params.characterId : "";
@@ -88,7 +76,6 @@ function App() {
   return (
     <>
       <Header />
-
       <Switch>
         <Route path="/" exact>
           <main className='main'>
@@ -102,11 +89,9 @@ function App() {
           </main>
           <Footer />
         </Route>
-
         <Route path="/character/:characterId">
           <CharCard char={selectedChar} />
         </Route>
-
         <Route>
           <PageNotFound />
         </Route>

@@ -1,4 +1,3 @@
-import imgLogo from "../images/RickandMorty.png";
 import "../styles/layout/Footer.scss";
 
 const Footer = () => {
