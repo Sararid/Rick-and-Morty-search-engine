@@ -110,9 +110,10 @@ function App() {
             <ChangePage handleLess={handleLess} handleMore={handleMore} page={page} />
 
             <RenderCharList data={FilteredData} />
-            <ChangePage handleLess={handleLess} handleMore={handleMore} page={page} />
 
           </main>
+
+
           <Footer />
         </Route>
         <Route path="/character/:characterId">

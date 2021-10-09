@@ -1,0 +1,17 @@
+.pageNav {
+  margin: 30px 0px;
+
+  &__list {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    &--item {
+      list-style: none;
+    }
+  }
+}
+
+.fas {
+  padding-right: 10px;
+}

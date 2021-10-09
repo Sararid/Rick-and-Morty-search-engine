@@ -1,21 +1,21 @@
 // React
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
+
+import "../styles/layout/ChangePage.scss";
 
 const ChangePage = (props) => {
     const { page, handleLess, handleMore } = props;
 
     return (
-        <nav className="nav">
-            <ul className="arrows">
-                <li key="left" className="arrows__containerL" onClick={handleLess}>
-                    <i className="fas fa-angle-double-left arrows__prev"></i>
-                    <p className="arrows__text"> Previous page</p>
+        <nav className="pageNav">
+            <ul className="pageNav__list">
+                <li className="pageNav__list--item" onClick={handleLess}>
+                    <i className="fas fa-angle-double-left "></i> Previous page
                 </li>
-                <span className="arrows__counter">| Page {page} |</span>
-                <li key="right" className="arrows__containerR" onClick={handleMore}>
-                    <p className="arrows__text"> Next page </p>
-                    <i className="fas fa-angle-double-right arrows__next"></i>
+                <span>| Page {page} |</span>
+                <li className="pageNav__list--item" onClick={handleMore}>
+                    <i className="fas fa-angle-double-right ">  </i>Next page
                 </li>
             </ul>
         </nav>
