@@ -14,6 +14,10 @@ const FilterCharSpecie = (props) => {
                 <option value="All">All</option>
                 <option value="Human">Human</option>
                 <option value="Alien">Alien</option>
+                <option value="Humanoid">Humanoid</option>
+
+                <option value="Mythological creature">Mythological creature</option>
+                <option value="Unknow">Unknow</option>
             </select>
         </>
     );

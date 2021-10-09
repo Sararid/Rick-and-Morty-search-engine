@@ -15,6 +15,9 @@ const RenderCharDetails = (props) => {
                     <p className="wrapper__listChar--textSpecie">
                         Specie: <strong>{props.char.species}</strong>
                     </p>
+                    <p className="wrapper__listChar--textSpecie">
+                        Status: <strong>{props.char.status}</strong>
+                    </p>
                 </div>
             </div>
         </>

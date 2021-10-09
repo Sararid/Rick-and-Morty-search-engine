@@ -24,10 +24,10 @@
     gap: 110px;
   }
   @media (min-width: 1200px) {
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: auto auto auto;
   }
   &__listChar {
-    max-width: 250px;
+    // max-width: 250px;
     :hover {
       background-color: yellowgreen;
     }
@@ -39,8 +39,9 @@
       padding: 10px 10px;
 
       @media (min-width: 768px) {
-        width: 300px;
-        height: 300px;
+        //  width: 300px;
+        // height: 300px;
+        //max-width: 200px;
       }
     }
     &--imageChar {
@@ -66,7 +67,7 @@
     }
 
     &--textName {
-      max-width: 130px;
+      max-width: 200px;
       padding: 5px 0;
       font-size: 20px;
     }

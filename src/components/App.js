@@ -23,7 +23,7 @@ function App() {
   const [data, setData] = useState([]);
   const [searchName, setSearchName] = useState(ls.get("name", ""));
   const [selectSepecies, setSelectSpecies] = useState("All");
-
+  const [selectStatus, setSelectStatus] = useState('all');
 
   const [page, setPage] = useState(ls.get('page', 1));
 
@@ -58,8 +58,13 @@ function App() {
 
   const handleSelect = (value) => {
     setSelectSpecies(value);
+
   };
 
+  const handleStatus = (value) => {
+    setSelectStatus(value);
+    console.log(value)
+  }
 
   const FilteredData = data
     .filter((char) =>
@@ -67,6 +72,10 @@ function App() {
     )
     .filter(
       (char) => selectSepecies === "All" || selectSepecies === char.species
+    )
+
+    .filter(
+      (char) => selectStatus === "all" || selectStatus === char.status
     )
     .sort((a, b) => {
       if (a.name > b.name) {
@@ -104,8 +113,10 @@ function App() {
             <Filters
               searchName={searchName}
               selectSepecies={selectSepecies}
+              selectStatus={selectStatus}
               handleSearchName={handleSearchName}
               handleSelect={handleSelect}
+              handleStatus={handleStatus}
             />
             <ChangePage handleLess={handleLess} handleMore={handleMore} page={page} />
 

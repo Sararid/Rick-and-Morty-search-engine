@@ -1,6 +1,7 @@
 import FilterCharName from "./FilterCharName";
 import FilterCharSpecie from "./FilterCharSpecie";
 import '../styles/layout/Filters.scss';
+import FilterCharByStatus from "./FilterCharByStatus";
 
 const Filters = (props) => {
     return (
@@ -17,6 +18,8 @@ const Filters = (props) => {
                 selectSpecies={props.selectSepecies}
                 handleSelect={props.handleSelect}
             />
+
+            <FilterCharByStatus selectStatus={props.selectStatus} handleStatus={props.handleStatus} />
         </form>
     );
 };
