@@ -3,8 +3,8 @@ import '../styles/layout/NotFound.scss';
 const CharNotFound = () => {
     return (<>
         <section className='wrapperNotFound'>
-            <p className='wrapperNotFound__errorText'>CHARACTER NOT FOUND</p>
-            <p>Type new name again </p>
+            <p className='wrapperNotFound__errorText'> NOT FOUND</p>
+            <p>Try Again! </p>
         </section>
     </>);
 }

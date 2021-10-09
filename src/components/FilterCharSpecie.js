@@ -16,7 +16,6 @@ const FilterCharSpecie = (props) => {
                 <option value="Alien">Alien</option>
                 <option value="Humanoid">Humanoid</option>
 
-                <option value="Mythological creature">Mythological creature</option>
                 <option value="Unknow">Unknow</option>
             </select>
         </>

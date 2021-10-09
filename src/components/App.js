@@ -123,8 +123,6 @@ function App() {
             <RenderCharList data={FilteredData} />
 
           </main>
-
-
           <Footer />
         </Route>
         <Route path="/character/:characterId">
