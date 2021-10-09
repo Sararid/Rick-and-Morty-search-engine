@@ -14,24 +14,37 @@ import CharCard from "./CharCard";
 import PageNotFound from "./PageNotFound";
 import Footer from "./Footer";
 
+
+import counters from "../services/counters";
+import ChangePage from "./ChangePage";
+
+
 function App() {
   const [data, setData] = useState([]);
   const [searchName, setSearchName] = useState(ls.get("name", ""));
   const [selectSepecies, setSelectSpecies] = useState("All");
 
 
+  const [page, setPage] = useState(ls.get('page', 1));
+
+
+  // useEffect(() => {
+  //   if (ls.get('char', []).length > 0) {
+  //     console.log(ls.get('char', []));
+  //     setData(ls.get('char', []));
+  //   } else {
+  //     api.callToApi(page).then((initialData) => {
+  //       console.log(initialData);
+  //       setData(initialData);
+  //       ls.set('char', initialData);
+  //     });
+  //   }
+  // }, [page]);
+
+  // call to API
   useEffect(() => {
-    if (ls.get('char', []).length > 0) {
-      console.log(ls.get('char', []));
-      setData(ls.get('char', []));
-    } else {
-      api.callToApi().then((initialData) => {
-        console.log(initialData);
-        setData(initialData);
-        ls.set('char', initialData);
-      });
-    }
-  }, []);
+    api.callToApi(page).then((data) => setData(data));
+  }, [page]);
 
 
   useEffect(() => {
@@ -66,6 +79,15 @@ function App() {
     });
 
 
+  // handler functions to navigate through pages
+  const handleLess = () => {
+    counters.prev(page, setPage);
+  };
+  const handleMore = () => {
+    counters.next(page, setPage);
+  };
+
+
   const routeData = useRouteMatch("/character/:characterId");
   console.log(routeData)
   const charId = routeData != null ? routeData.params.characterId : "";
@@ -85,7 +107,11 @@ function App() {
               handleSearchName={handleSearchName}
               handleSelect={handleSelect}
             />
+            <ChangePage handleLess={handleLess} handleMore={handleMore} page={page} />
+
             <RenderCharList data={FilteredData} />
+            <ChangePage handleLess={handleLess} handleMore={handleMore} page={page} />
+
           </main>
           <Footer />
         </Route>
