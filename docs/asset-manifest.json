@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "./static/css/main.ab27bc7f.chunk.css",
+    "main.js": "./static/js/main.0edba91a.chunk.js",
+    "main.js.map": "./static/js/main.0edba91a.chunk.js.map",
+    "runtime-main.js": "./static/js/runtime-main.7ad783a2.js",
+    "runtime-main.js.map": "./static/js/runtime-main.7ad783a2.js.map",
+    "static/js/2.b1a68487.chunk.js": "./static/js/2.b1a68487.chunk.js",
+    "static/js/2.b1a68487.chunk.js.map": "./static/js/2.b1a68487.chunk.js.map",
+    "index.html": "./index.html",
+    "static/css/main.ab27bc7f.chunk.css.map": "./static/css/main.ab27bc7f.chunk.css.map",
+    "static/js/2.b1a68487.chunk.js.LICENSE.txt": "./static/js/2.b1a68487.chunk.js.LICENSE.txt",
+    "static/media/RickandMorty.de13d484.png": "./static/media/RickandMorty.de13d484.png",
+    "static/media/CharCard.scss": "./static/media/background.b776a648.jpg",
+    "static/media/notFound2.a7989f37.PNG": "./static/media/notFound2.a7989f37.PNG"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7ad783a2.js",
+    "static/js/2.b1a68487.chunk.js",
+    "static/css/main.ab27bc7f.chunk.css",
+    "static/js/main.0edba91a.chunk.js"
+  ]
+}
