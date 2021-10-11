@@ -4,7 +4,7 @@
 
 <h3 >A passionate front-end developer student from Barcelona! Welcome to my Git.✨</h3>
 
-Please find here my first completed App built with REACT: XXXXXXXXXXXXXXXXXXXX !
+Please find here my first completed App built with REACT: https://sararid.github.io/Rick-and-Morty-search-engine/ !
 
 # Rick and Morty search engine
 
