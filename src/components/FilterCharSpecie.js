@@ -3,8 +3,8 @@ const FilterCharSpecie = (props) => {
         props.handleSelect(ev.currentTarget.value)
     }
     return (
-        <>
-            <label htmlFor="species" className='form__labelText'>Select species here</label>
+        <div className='selectOption__item'>
+            <label htmlFor="species" className='form__labelText'>Select species</label>
             <select className='form__searchSpecies'
                 name="species"
                 id="species"
@@ -18,7 +18,7 @@ const FilterCharSpecie = (props) => {
 
                 <option value="Unknow">Unknow</option>
             </select>
-        </>
+        </div >
     );
 };
 

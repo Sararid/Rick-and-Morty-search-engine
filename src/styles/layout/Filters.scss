@@ -29,3 +29,16 @@
     color: white;
   }
 }
+
+.selectOption {
+  display: flex;
+  margin-top: 20px;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+}

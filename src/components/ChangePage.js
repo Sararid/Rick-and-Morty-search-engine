@@ -9,7 +9,7 @@ const ChangePage = (props) => {
 
     return (
         <nav className="pageNav">
-            <ul className="pageNav__list">
+            <ul className="pageNav__list animation_page">
                 <li className="pageNav__list--item" onClick={handleLess}>
                     <i className="fas fa-angle-double-left "></i> Previous page
                 </li>

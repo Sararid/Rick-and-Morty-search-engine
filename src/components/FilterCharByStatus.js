@@ -3,7 +3,7 @@ const FilterCharByStatus = (props) => {
         props.handleStatus(ev.currentTarget.value)
     }
     return (
-        <>
+        <div className='selectOption__item'>
             <label htmlFor="status" className='form__labelText'>Status:</label>
             <select className='form__searchSpecies'
                 name="status"
@@ -16,7 +16,7 @@ const FilterCharByStatus = (props) => {
                 <option value="Dead">Dead</option>
                 <option value="unknown">Unknown</option>
             </select>
-        </>
+        </div>
     );
 };
 

@@ -1,6 +1,6 @@
 import FilterCharName from "./FilterCharName";
 import FilterCharSpecie from "./FilterCharSpecie";
-import '../styles/layout/Filters.scss';
+import "../styles/layout/Filters.scss";
 import FilterCharByStatus from "./FilterCharByStatus";
 
 const Filters = (props) => {
@@ -9,17 +9,22 @@ const Filters = (props) => {
             <FilterCharName
                 searchName={props.searchName}
                 handleSearchName={props.handleSearchName}
-                labelText='Type name here'
+                labelText="Type name here"
                 type="text"
                 name="name"
                 id="name"
             />
-            <FilterCharSpecie
-                selectSpecies={props.selectSepecies}
-                handleSelect={props.handleSelect}
-            />
+            <div className="selectOption">
+                <FilterCharSpecie
+                    selectSpecies={props.selectSepecies}
+                    handleSelect={props.handleSelect}
+                />
 
-            <FilterCharByStatus selectStatus={props.selectStatus} handleStatus={props.handleStatus} />
+                <FilterCharByStatus
+                    selectStatus={props.selectStatus}
+                    handleStatus={props.handleStatus}
+                />
+            </div>
         </form>
     );
 };
