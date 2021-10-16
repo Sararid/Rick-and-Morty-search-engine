@@ -11,7 +11,8 @@ const callToApi = (page) => {
                         id: char.id,
                         status: char.status,
                         episode: char.episode,
-                        origin: char.origin.name
+                        origin: char.origin.name,
+
 
                     }
                     return result;

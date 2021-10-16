@@ -10,7 +10,7 @@ const RenderCharDetails = (props) => {
                 <div className="wrapper__listChar--styleContent">
                     <p className="wrapper__listChar--textName">
 
-                        Name: <strong>{props.char.name}</strong>
+                        <strong>{props.char.name}</strong>
                     </p>
                     <p className="wrapper__listChar--textSpecie">
                         Specie: <strong>{props.char.species}</strong>

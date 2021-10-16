@@ -28,24 +28,25 @@ function App() {
   const [page, setPage] = useState(ls.get('page', 1));
 
 
-  // useEffect(() => {
-  //   if (ls.get('char', []).length > 0) {
-  //     console.log(ls.get('char', []));
-  //     setData(ls.get('char', []));
-  //   } else {
-  //     api.callToApi(page).then((initialData) => {
-  //       console.log(initialData);
-  //       setData(initialData);
-  //       ls.set('char', initialData);
-  //     });
-  //   }
-  // }, [page]);
 
   // call to API
   useEffect(() => {
-    api.callToApi(page).then((data) => setData(data));
+    api.callToApi(page).then((data) => { setData(data); ls.set('char', data); });
   }, [page]);
 
+  useEffect(() => {
+    if (ls.get('char', []).length > 0) {
+      console.log(ls.get('char', []))
+      setData(ls.get('char', []));
+    } else {
+
+      api.callToApi(page).then((data) => {
+
+        setData(data);
+        ls.set('char', data);
+      });
+    }
+  }, [page]);
 
   useEffect(() => {
     ls.set("name", searchName);
@@ -98,7 +99,7 @@ function App() {
 
 
   const routeData = useRouteMatch("/character/:characterId");
-  console.log(routeData)
+  //console.log(routeData)
   const charId = routeData != null ? routeData.params.characterId : "";
   const selectedChar = data.find((char) => {
     return char.id === parseInt(charId);

@@ -1,21 +1,18 @@
 .mainWrapper {
   margin: 40px 40px;
-
   &__link {
     text-decoration: none;
   }
 }
-
 .wrapper {
   padding-left: 0px;
   list-style: none;
   display: grid;
   grid-template-columns: auto auto auto;
   grid-template-rows: auto;
-  gap: 5px;
+  gap: 15px;
   justify-items: center;
   justify-content: center;
-
   @media (max-width: 600px) {
     grid-template-columns: auto;
   }
@@ -26,27 +23,31 @@
   @media (min-width: 1200px) {
     grid-template-columns: auto auto auto;
   }
+
   &__listChar {
-    // max-width: 250px;
     :hover {
       background-color: yellowgreen;
     }
-
     &--wrap {
       display: flex;
       flex-direction: column;
       align-items: center;
       padding: 10px 10px;
-
+      background-color: #69c8ecff;
+      border-radius: 15px;
+      max-width: 280px;
+      max-height: 320px;
       @media (min-width: 768px) {
-        //  width: 300px;
-        // height: 300px;
-        //max-width: 200px;
+        max-width: 350px;
+        max-height: 450px;
       }
     }
+
     &--imageChar {
-      width: 200px;
-      height: 200px;
+      width: 216px;
+      height: 245px;
+      border: solid yellowgreen 3px;
+      border-radius: 50%;
 
       @media (min-width: 768px) {
         width: 300px;
@@ -57,12 +58,14 @@
       font-family: "Gemunu Libre", sans-serif;
       font-size: 20px;
       color: white;
-      background-color: #69c8ecff;
       width: 100%;
       padding: 10px 10px;
+      text-align: center;
 
       @media (min-width: 768px) {
         width: 300px;
+        text-align: center;
+        width: 80%;
       }
     }
 

@@ -6,7 +6,7 @@ const prev = (state, funcSetState) => {
     state = state - 1;
     return state < 1
         ? ApiPages().then((maxPage) => {
-            console.log(maxPage);
+
             return funcSetState(maxPage);
         })
         : funcSetState(state);
